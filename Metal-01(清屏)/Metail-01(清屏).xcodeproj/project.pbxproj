@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EA1794D233B5BBD009A9A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1794C233B5BBD009A9A8F /* AppDelegate.swift */; };
+		9EA1794F233B5BBD009A9A8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1794E233B5BBD009A9A8F /* SceneDelegate.swift */; };
+		9EA17951233B5BBD009A9A8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA17950233B5BBD009A9A8F /* ViewController.swift */; };
+		9EA17954233B5BBD009A9A8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA17952233B5BBD009A9A8F /* Main.storyboard */; };
+		9EA17956233B5BBF009A9A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA17955233B5BBF009A9A8F /* Assets.xcassets */; };
+		9EA17959233B5BBF009A9A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA17957233B5BBF009A9A8F /* LaunchScreen.storyboard */; };
+		9EA17961233B6076009A9A8F /* XTMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA17960233B6076009A9A8F /* XTMetalView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9EA17949233B5BBD009A9A8F /* Metail-01(清屏).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metail-01(清屏).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA1794C233B5BBD009A9A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9EA1794E233B5BBD009A9A8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9EA17950233B5BBD009A9A8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9EA17953233B5BBD009A9A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9EA17955233B5BBF009A9A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EA17958233B5BBF009A9A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9EA1795A233B5BBF009A9A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EA17960233B6076009A9A8F /* XTMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTMetalView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EA17946233B5BBD009A9A8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9EA17940233B5BBD009A9A8F = {
+			isa = PBXGroup;
+			children = (
+				9EA1794B233B5BBD009A9A8F /* Metail-01(清屏) */,
+				9EA1794A233B5BBD009A9A8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9EA1794A233B5BBD009A9A8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EA17949233B5BBD009A9A8F /* Metail-01(清屏).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EA1794B233B5BBD009A9A8F /* Metail-01(清屏) */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1794C233B5BBD009A9A8F /* AppDelegate.swift */,
+				9EA1794E233B5BBD009A9A8F /* SceneDelegate.swift */,
+				9EA17950233B5BBD009A9A8F /* ViewController.swift */,
+				9EA17960233B6076009A9A8F /* XTMetalView.swift */,
+				9EA17952233B5BBD009A9A8F /* Main.storyboard */,
+				9EA17955233B5BBF009A9A8F /* Assets.xcassets */,
+				9EA17957233B5BBF009A9A8F /* LaunchScreen.storyboard */,
+				9EA1795A233B5BBF009A9A8F /* Info.plist */,
+			);
+			path = "Metail-01(清屏)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EA17948233B5BBD009A9A8F /* Metail-01(清屏) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EA1795D233B5BBF009A9A8F /* Build configuration list for PBXNativeTarget "Metail-01(清屏)" */;
+			buildPhases = (
+				9EA17945233B5BBD009A9A8F /* Sources */,
+				9EA17946233B5BBD009A9A8F /* Frameworks */,
+				9EA17947233B5BBD009A9A8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Metail-01(清屏)";
+			productName = "Metail-01(清屏)";
+			productReference = 9EA17949233B5BBD009A9A8F /* Metail-01(清屏).app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EA17941233B5BBD009A9A8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "熊涛";
+				TargetAttributes = {
+					9EA17948233B5BBD009A9A8F = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 9EA17944233B5BBD009A9A8F /* Build configuration list for PBXProject "Metail-01(清屏)" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9EA17940233B5BBD009A9A8F;
+			productRefGroup = 9EA1794A233B5BBD009A9A8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EA17948233B5BBD009A9A8F /* Metail-01(清屏) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EA17947233B5BBD009A9A8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA17959233B5BBF009A9A8F /* LaunchScreen.storyboard in Resources */,
+				9EA17956233B5BBF009A9A8F /* Assets.xcassets in Resources */,
+				9EA17954233B5BBD009A9A8F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EA17945233B5BBD009A9A8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA17951233B5BBD009A9A8F /* ViewController.swift in Sources */,
+				9EA1794D233B5BBD009A9A8F /* AppDelegate.swift in Sources */,
+				9EA17961233B6076009A9A8F /* XTMetalView.swift in Sources */,
+				9EA1794F233B5BBD009A9A8F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9EA17952233B5BBD009A9A8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EA17953233B5BBD009A9A8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9EA17957233B5BBF009A9A8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EA17958233B5BBF009A9A8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EA1795B233B5BBF009A9A8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9EA1795C233B5BBF009A9A8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EA1795E233B5BBF009A9A8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JV42LZAWKY;
+				INFOPLIST_FILE = "Metail-01(清屏)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "xiong-tao.Metail-01----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9EA1795F233B5BBF009A9A8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JV42LZAWKY;
+				INFOPLIST_FILE = "Metail-01(清屏)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "xiong-tao.Metail-01----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EA17944233B5BBD009A9A8F /* Build configuration list for PBXProject "Metail-01(清屏)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EA1795B233B5BBF009A9A8F /* Debug */,
+				9EA1795C233B5BBF009A9A8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EA1795D233B5BBF009A9A8F /* Build configuration list for PBXNativeTarget "Metail-01(清屏)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EA1795E233B5BBF009A9A8F /* Debug */,
+				9EA1795F233B5BBF009A9A8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EA17941233B5BBD009A9A8F /* Project object */;
+}
