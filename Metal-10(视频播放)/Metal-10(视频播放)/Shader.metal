@@ -31,6 +31,23 @@ vertex RasterizerData vertexShader(constant XTVertex *vertices[[buffer(0)]], uin
 }
 
 /*
+ 1.顶点坐标
+ 2.纹理坐标
+ 3.当前处理顶点index
+ */
+vertex RasterizerData vertexShader2(device packed_float2 *posotion [[buffer(0)]],
+                                    device packed_float2 *textureCoordinates [[buffer(1)]],
+                                    uint vid[[vertex_id]]) {
+    
+    RasterizerData outData;
+    outData.position = float4(posotion[vid], 0.0, 1.0);
+    outData.texCoords = textureCoordinates[vid];
+    
+    return outData;
+}
+
+
+/*
  1.纹理数据
  2.纹理坐标
  */

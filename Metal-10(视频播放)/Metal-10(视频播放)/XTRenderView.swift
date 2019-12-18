@@ -26,6 +26,9 @@ class XTRenderView: UIView {
     var pixelBuffer: CVPixelBuffer?
     
     
+    let vertexs: [Float] = [-1.0, 1.0, 1.0, 1.0, -1.0, -1.0, 1.0, -1.0]
+    let textureCoordinates: [Float] = [0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commit()
@@ -62,7 +65,7 @@ class XTRenderView: UIView {
     }
     
     func setupPipelineState() {
-        let vf = library.makeFunction(name: "vertexShader")
+        let vf = library.makeFunction(name: "vertexShader2")
         let ff = library.makeFunction(name: "fragmentShader")
         
         let p = MTLRenderPipelineDescriptor()
@@ -136,7 +139,7 @@ class XTRenderView: UIView {
             
             // 清屏
             let renderPassDescriptor = MTLRenderPassDescriptor()
-            renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.48, 0.74, 0.92, 1)
+            renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0, 0, 0, 1)
             renderPassDescriptor.colorAttachments[0].texture = currentDrawable.texture
             renderPassDescriptor.colorAttachments[0].loadAction = .clear
             renderPassDescriptor.colorAttachments[0].storeAction = .store
@@ -145,9 +148,19 @@ class XTRenderView: UIView {
             }
             
             renderCommandEncoder.setRenderPipelineState(pipelineState)
-            renderCommandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+//            renderCommandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
             renderCommandEncoder.setFragmentBuffer(matrix, offset: 0, index: 0)
             setupTexture(encoder: renderCommandEncoder, pixelBuffer: pixelBuffer)
+            
+            
+            let wY = CVPixelBufferGetWidthOfPlane(pixelBuffer, 0)
+            let hY = CVPixelBufferGetHeightOfPlane(pixelBuffer, 0)
+            let vs = transformVertices(vertex: vertexs, inputSize: CGSize(width: wY, height: hY), drawableSize: mtkView.drawableSize)
+            let vertexBuffer = device.makeBuffer(bytes: vs, length: MemoryLayout<Float>.size * 8, options: [])
+            let textureVerBuffer = device.makeBuffer(bytes: textureCoordinates, length: MemoryLayout<Float>.size * 8, options: [])
+            renderCommandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+            renderCommandEncoder.setVertexBuffer(textureVerBuffer, offset: 0, index: 1)
+            
             
             renderCommandEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
             renderCommandEncoder.endEncoding()
@@ -159,6 +172,38 @@ class XTRenderView: UIView {
     func setupBuffer(pixelBuffer: CVPixelBuffer) {
         self.pixelBuffer = pixelBuffer
         self.draw(mtkView.frame)
+    }
+    
+    /// 顶点转换
+    func transformVertices(vertex: [Float], inputSize: CGSize, drawableSize: CGSize) -> [Float] {
+        
+        let inputAspectRatio = inputSize.height / inputSize.width
+        let drawableAspectRatio = drawableSize.height / drawableSize.width
+        
+        var xRatio: Float = 1.0
+        var yRatio: Float = 1.0
+        
+        if inputAspectRatio > drawableAspectRatio {
+            yRatio = 1.0
+            xRatio = Float((inputSize.width / drawableSize.width) * (drawableSize.height / inputSize.height))
+        }else {
+            xRatio = 1.0
+            yRatio = Float((inputSize.height / drawableSize.height) * (drawableSize.width / inputSize.width))
+        }
+        
+        let value1 = vertex[0] * xRatio
+        let value2 = vertex[1] * yRatio
+        
+        let value3 = vertex[2] * xRatio
+        let value4 = vertex[3] * yRatio
+        
+        let value5 = vertex[4] * xRatio
+        let value6 = vertex[5] * yRatio
+        
+        let value7 = vertex[6] * xRatio
+        let value8 = vertex[7] * yRatio
+        
+        return [value1, value2, value3, value4, value5, value6, value7, value8]
     }
     
     // MARK: - lazy

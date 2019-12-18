@@ -34,7 +34,8 @@ class ViewController: UIViewController, XTVideoMovieDelegate {
     }
     
     func configMovie() {
-        guard let path = Bundle.main.path(forResource: "v0200f830000bngvvsj2ap95jt9tm5e0", ofType: "MP4") else { return  }
+//        guard let path = Bundle.main.path(forResource: "v0200f830000bngvvsj2ap95jt9tm5e0", ofType: "MP4") else { return  }
+        guard let path = Bundle.main.path(forResource: "IMG_0064", ofType: "MOV") else { return  }
         let item = AVPlayerItem(asset: AVAsset(url: URL(fileURLWithPath: path)))
         movie = XTVideoMovie(items: [item])
         movie?.delegate = self
