@@ -40,7 +40,6 @@ class XTRenderView2: XTRenderView {
     
     func addTextureCount() {
         textureCount += 1
-//        setupUniformBuffer()
     }
     
     func setupUniformBuffer() {

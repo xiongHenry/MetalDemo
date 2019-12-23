@@ -56,12 +56,12 @@ fragment float4 fragmentShader(RasterizerData inVertex [[stage_in]], //stage_in�
                                constant XTConvertMatrix *convertMarix [[buffer(0)]] // buffer表示名缓存数据
                                ) {
     
-    float horizontal = 2;
-    float vertical = 3;
-    float horizontalCount = max(horizontal, 1.0);  // (2)
-    float verticalCount = max(vertical, 1.0);
+    float row = 2;
+    float column = 3;
+    float rowCount = max(row, 1.0);  // (2)
+    float columnCount = max(column, 1.0);
       
-    float ratio = horizontalCount / verticalCount;  // (3)
+    float ratio = rowCount / columnCount;  // (3)
         
     float2 originSize = float2(1.0, 1.0);
     float2 newSize = originSize;
@@ -73,9 +73,7 @@ fragment float4 fragmentShader(RasterizerData inVertex [[stage_in]], //stage_in�
     }
     
     float2 offset = (originSize - newSize) / 2.0;  // (4)
-    float2 position = offset + fmod(inVertex.texCoords * min(horizontalCount, verticalCount), newSize);  // (5)
-//    float2 position = modf(inVertex.texCoords * min(horiYYzontalCount, verticalCount), newSize);  // (5)
-//    float2 position = inVertex.texCoords * 2;
+    float2 position = offset + fmod(inVertex.texCoords * min(rowCount, columnCount), newSize);  // (5)
     
     
     //取样器
